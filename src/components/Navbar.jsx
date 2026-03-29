@@ -1,4 +1,5 @@
 import React from "react";
+import shoppingCart from "../assets/products/shopping-cart.png";
 
 function Navbar() {
   return (
@@ -30,11 +31,7 @@ function Navbar() {
             </ul>
           </div>
           <div className="navbar-end gap-4">
-            <img
-              src="src/assets/products/shopping-cart.png"
-              alt="Shopping Cart"
-              srcset=""
-            />
+            <img src={shoppingCart} alt="Shopping Cart" srcset="" />
             <a href="#">Login</a>
             <button className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-3 px-5 rounded-4xl text-white font-bold">
               Get Started
