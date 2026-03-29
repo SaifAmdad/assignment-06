@@ -1,0 +1,46 @@
+import React from "react";
+
+function Hero() {
+  return (
+    <>
+      <div className="flex items-center justify-between py-24 w-[76%] mx-auto">
+        <div className="flex flex-col w-[52%]">
+          <div className="flex items-center justify-center py-2 px-4 bg-blue-100 rounded-4xl gap-2 w-fit">
+            <div className="flex items-center justify-center rounded-4xl bg-linear-to-r from-[#d1cbff] to-[#e8cbff] p-1.5">
+              <div className="flex items-center justify-center rounded-4xl bg-linear-to-r from-[#a599ff] to-[#c985fd] p-1.5">
+                <div className="flex items-center justify-center rounded-4xl bg-linear-to-r from-[#4F39F6] to-[#9514FA] h-1 w-1 p-0.5"></div>
+              </div>{" "}
+            </div>
+            <p className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-[16px] bg-clip-text text-transparent font-medium ">
+              New: AI-Powered Tools Available
+            </p>
+          </div>
+
+          <h1 className="text-7xl font-extrabold py-4 leading-20">
+            Supercharge Your Digital Workflow
+          </h1>
+          <p className="text-[18px] font-normal leading-7 text-[#627382] w-xl">
+            Access premium AI tools, design assets, templates, and productivity{" "}
+            <br />
+            software—all in one place. Start creating faster today. <br />{" "}
+            Explore Products
+          </p>
+
+          <div className="flex gap-4 justify-start pt-8">
+            <button className="py-6 px-5 btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] text-white font-bold text-[16px] rounded-4xl">
+              Explore Products
+            </button>
+            <button className="py-6 px-5 flex justify-center items-center gap-2.5 btn btn-outline text-[#4F39F6] rounded-4xl font-bold text-[16px] ">
+              <img src="src/assets/Play.png" alt="" srcset="" /> Watch Demo
+            </button>
+          </div>
+        </div>
+        <div className="w-[40%] ">
+          <img src="src/assets/banner.png" alt="" srcset="" />
+        </div>
+      </div>
+    </>
+  );
+}
+
+export default Hero;
