@@ -31,12 +31,21 @@ function Hero() {
               Explore Products
             </button>
             <button className="py-6 px-5 flex justify-center items-center gap-2.5 btn btn-outline text-[#4F39F6] rounded-4xl font-bold text-[16px] ">
-              <img src="src/assets/Play.png" alt="" srcset="" /> Watch Demo
+              <img
+                src="https://namprokash.github.io/assingment-06-photos/Play.png"
+                alt=""
+                srcset=""
+              />{" "}
+              Watch Demo
             </button>
           </div>
         </div>
         <div className="w-[40%] ">
-          <img src="src/assets/banner.png" alt="" srcset="" />
+          <img
+            src="https://namprokash.github.io/assingment-06-photos/banner.png"
+            alt=""
+            srcset=""
+          />
         </div>
       </div>
     </>

@@ -18,14 +18,15 @@ function Tools({ tools }) {
             Products
           </button>
           <button className="btn shadow-base-200 py-4 px-6 rounded-4xl">
-            Cart{`(${tools.length})`}
+            Cart{`(${selected.length})`}
           </button>
         </div>
       </div>
       <div className="w-[76%] mx-auto grid grid-cols-3 gap-7">
-        {tools.map((tool) => {
+        {tools.map((tool, index) => {
           return (
             <ProductCard
+              index={index}
               key={tool.id}
               data={tool}
               selected={selected}
