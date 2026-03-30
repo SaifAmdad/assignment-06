@@ -1,0 +1,133 @@
+{
+  "message": "Successefully fetched data",
+  "products": [
+    {
+      "id": 1,
+      "name": "AI Writing Pro",
+      "description": "Generate high-quality content, blogs, and marketing copy in seconds with advanced AI.",
+      "price": 29,
+      "badge": "Best Seller",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/writing_2327400%201.png",
+      "services": [
+        "Unlimited AI generations",
+        "50+ writing templates",
+        "Grammar checker"
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Design Templates Pack",
+      "description": "2000+ premium templates for social media, presentations, and marketing materials.",
+      "price": 49,
+      "badge": "Popular",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/design-tool.png",
+      "services": ["2000+ templates", "Monthly updates", "Commercial license"]
+    },
+    {
+      "id": 3,
+      "name": "Premium Stock Assets",
+      "description": "Access millions of royalty-free photos, videos, and graphics for your projects.",
+      "price": 19,
+      "badge": "New",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/camera.png",
+      "services": ["10M+ assets", "Commercial use", "No attribution"]
+    },
+    {
+      "id": 4,
+      "name": "Automation Toolkit",
+      "description": "Automate repetitive tasks and streamline your workflow with powerful tools.",
+      "price": 79,
+      "badge": "Popular",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/operation.png",
+
+      "services": ["50+ automations", "API access", "Custom workflows"]
+    },
+    {
+      "id": 5,
+      "name": "Resume Builder Pro",
+      "description": "Create professional resumes and cover letters that land interviews.",
+      "price": 15,
+      "badge": "New",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/portfolio.png",
+
+      "services": ["100+ templates", "ATS optimization", "Export to PDF"]
+    },
+    {
+      "id": 6,
+      "name": "Social Media Content Kit",
+      "description": "Complete toolkit for creating engaging social media content across all platforms.",
+      "price": 39,
+      "badge": "Best Seller",
+      "img": "https://namprokash.github.io/assingment-06-photos/products/social-media.png",
+
+      "services": ["5000+ assets", "Scheduler included", "Analytics dashboard"]
+    }
+  ],
+  "steps": [
+    {
+      "id": 1,
+      "title": "Create Account",
+      "description": "Sign up for free in seconds. No credit card required to get started.",
+      "img": "https://namprokash.github.io/assingment-06-photos/user.png"
+    },
+    {
+      "id": 2,
+      "title": "Choose Products",
+      "img": "https://namprokash.github.io/assingment-06-photos/package.png",
+      "description": "Browse our catalog and select the tools that fit your needs."
+    },
+    {
+      "id": 3,
+      "title": "Start Creating",
+      "img": "https://namprokash.github.io/assingment-06-photos/rocket.png",
+
+      "description": "Download and start using your premium tools immediately."
+    }
+  ],
+  "pricing": [
+    {
+      "id": 1,
+      "name": "Starter",
+      "description": "Perfect for getting started",
+      "price": 0,
+      "features": [
+        "Access to 10 free tools",
+        "Basic templates",
+        "Community support",
+        "1 project per month"
+      ],
+      "btnText": "Get Started Free"
+    },
+    {
+      "id": 2,
+      "name": "Pro",
+      "description": "Best for professionals",
+      "price": 29,
+      "badge": "Most Popular",
+      "features": [
+        "Access to all premium tools",
+        "Unlimited templates",
+        "Priority support",
+        "Unlimited projects",
+        "Cloud sync",
+        "Advanced analytics"
+      ],
+      "btnText": "Start Pro Trial"
+    },
+    {
+      "id": 3,
+      "name": "Enterprise",
+      "description": "For teams and businesses",
+      "price": 99,
+      "features": [
+        "Everything in Pro",
+        "Team collaboration",
+        "Custom integrations",
+        "Dedicated support",
+        "SLA guarantee",
+        "Custom branding"
+      ],
+      "btnText": "Contact Sales"
+    }
+  ]
+}
