@@ -8,7 +8,7 @@ function Tools({ tools }) {
   const [totalPrice, setTotalPrice] = useState(0);
   const handleRemove = (cartData, i) => {
     const res = confirm("Are you sure you want to remove this item?");
-    if (!res) {
+    if (res) {
       const updatedSelected = selected.filter((Saif, index) => index !== i);
       setSelected(updatedSelected);
       setTotalPrice(totalPrice - cartData.price);
@@ -55,7 +55,7 @@ function Tools({ tools }) {
             return (
               <ProductCard
                 index={index}
-                key={tool.id}
+                key={index}
                 data={tool}
                 selected={selected}
                 setSelected={setSelected}
@@ -66,12 +66,15 @@ function Tools({ tools }) {
           })}
         </div>
       ) : (
-        <div className="2xl:w-[76%] xl:w-[80%] w-[90%] p-10 mx-auto">
+        <div className="2xl:w-[76%] xl:w-[80%] w-[90%] px-10 mx-auto">
           {selected.length > 0 ? (
             <>
-              {selected.map((cartData, index) => {
-                return (
-                  <>
+              <div className="bg-base-200 rounded-2xl p-10">
+                <h1 className="text-2xl font-bold text-black mb-6">
+                  Your Cart
+                </h1>
+                {selected.map((cartData, index) => {
+                  return (
                     <CartCard
                       cartData={cartData}
                       key={index}
@@ -80,12 +83,16 @@ function Tools({ tools }) {
                       setTotalPrice={setTotalPrice}
                       handleRemove={handleRemove}
                     />
-                  </>
-                );
-              })}
-              <div className="flex items-center justify-between p-5">
-                <p className="text-[#627382]">Total</p>
-                <p className="text-black text-2xl font-bold">{totalPrice}</p>
+                  );
+                })}
+
+                <div className="flex items-center justify-between p-5">
+                  <p className="text-[#627382]">Total</p>
+                  <p className="text-black text-2xl font-bold">${totalPrice}</p>
+                </div>
+                <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 text-white w-full rounded-4xl ">
+                  Proceed To Checkout
+                </button>
               </div>
             </>
           ) : (
@@ -96,6 +103,7 @@ function Tools({ tools }) {
           )}
         </div>
       )}
+      <div className="mb-32"></div>
     </>
   );
 }
