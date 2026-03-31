@@ -7,6 +7,7 @@ import Tools from "./components/Tools";
 import Steps from "./components/Steps";
 import Pricing from "./components/Pricing";
 import Workflow from "./components/Workflow";
+import Footer from "./components/Footer";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -33,6 +34,7 @@ function App() {
       <Steps steps={steps} />
       <Pricing pricing={pricing} />
       <Workflow />
+      <Footer />
     </>
   );
 }
