@@ -3,8 +3,8 @@ import React from "react";
 function Hero() {
   return (
     <>
-      <div className="flex items-center justify-between py-24 w-[76%] mx-auto">
-        <div className="flex flex-col w-[52%]">
+      <div className="flex sm:flex-col-reverse flex-col-reverse xl:flex-row items-center justify-between py-24 xl:w-[76%] w-[90%] mx-auto">
+        <div className="flex flex-col xl:w-[52%] sm:w-[90%] mx-auto">
           <div className="flex items-center justify-center py-2 px-4 bg-blue-100 rounded-4xl gap-2 w-fit">
             <div className="flex items-center justify-center rounded-4xl bg-linear-to-r from-[#d1cbff] to-[#e8cbff] p-1.5">
               <div className="flex items-center justify-center rounded-4xl bg-linear-to-r from-[#a599ff] to-[#c985fd] p-1.5">
@@ -16,10 +16,10 @@ function Hero() {
             </p>
           </div>
 
-          <h1 className="text-7xl font-extrabold py-4 leading-20">
+          <h1 className="text-4xl md:text-6xl xl:text-7xl font-extrabold py-4 leading-tight">
             Supercharge Your Digital Workflow
           </h1>
-          <p className="text-[18px] font-normal leading-7 text-[#627382] w-xl">
+          <p className="text-[18px] font-normal leading-7 text-[#627382] max-w-xl">
             Access premium AI tools, design assets, templates, and productivity{" "}
             <br />
             software—all in one place. Start creating faster today. <br />{" "}
@@ -40,7 +40,7 @@ function Hero() {
             </button>
           </div>
         </div>
-        <div className="w-[40%] ">
+        <div className="xl:w-[40%] sm:w-[90%] sm:flex sm:justify-center sm:pb-4 mb-6">
           <img
             src="https://namprokash.github.io/assingment-06-photos/banner.png"
             alt=""

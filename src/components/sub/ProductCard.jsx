@@ -1,14 +1,21 @@
 import React from "react";
 import { IoCheckmarkSharp } from "react-icons/io5";
 
-function ProductCard({ data, selected, setSelected, index }) {
+function ProductCard({
+  data,
+  selected,
+  setSelected,
+  index,
+  totalPrice,
+  setTotalPrice,
+}) {
   const handleSelect = (data, index) => {
     setSelected([...selected, data]);
-    console.log(index);
+    setTotalPrice(totalPrice + data.price);
   };
 
   return (
-    <div className="p-6 bg-white shadow-[#f2f2f2] w-96 rounded-2xl relative border-gray-200 border-2">
+    <div className="p-6 bg-white shadow-[#f2f2f2] max-w-96 rounded-2xl relative border-gray-200 border-2">
       <p
         className={`absolute top-2.5 right-2.5 py-1.5 px-3 text-[12px] rounded-4xl ${data.badge === "Best Seller" ? "bg-amber-100 text-[#BB4D00]" : data.badge === "Popular" ? "bg-[#E1E7FF] text-[#4F39F6]" : "bg-[#DBFCE7] text-[#0A883E]"}`}
       >
