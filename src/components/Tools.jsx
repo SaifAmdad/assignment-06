@@ -6,6 +6,15 @@ function Tools({ tools }) {
   const [selected, setSelected] = useState([]);
   const [renderComponent, setRenderComponent] = useState("products");
   const [totalPrice, setTotalPrice] = useState(0);
+  const handleRemove = (cartData, i) => {
+    const res = confirm("Are you sure you want to remove this item?");
+    if (!res) {
+      const updatedSelected = selected.filter((Saif, index) => index !== i);
+      setSelected(updatedSelected);
+      setTotalPrice(totalPrice - cartData.price);
+    }
+    return;
+  };
   return (
     <>
       <div className="w-[76%] mx-auto pt-32 pb-10">
@@ -19,12 +28,20 @@ function Tools({ tools }) {
         <div className="flex justify-center gap-3">
           <button
             onClick={() => setRenderComponent("products")}
-            className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 px-6 rounded-4xl text-white"
+            className={
+              renderComponent === "products"
+                ? "btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 px-6 rounded-4xl text-white font-bold"
+                : "btn shadow-base-200 py-4 px-6 rounded-4xl"
+            }
           >
             Products
           </button>
           <button
-            className="btn shadow-base-200 py-4 px-6 rounded-4xl"
+            className={
+              renderComponent === "cart"
+                ? "btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 px-6 rounded-4xl text-white font-bold"
+                : "btn shadow-base-200 py-4 px-6 rounded-4xl"
+            }
             onClick={() => setRenderComponent("cart")}
           >
             Cart{`(${selected.length})`}
@@ -58,8 +75,10 @@ function Tools({ tools }) {
                     <CartCard
                       cartData={cartData}
                       key={index}
+                      index={index}
                       totalPrice={totalPrice}
                       setTotalPrice={setTotalPrice}
+                      handleRemove={handleRemove}
                     />
                   </>
                 );

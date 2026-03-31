@@ -1,10 +1,12 @@
 import React from "react";
 
-function CartCard({ cartData, totalPrice, setTotalPrice }) {
-  const handleRemove = (cartData) => {
-    // setTotalPrice(totalPrice - cartData.price);
-    console.log(first);
-  };
+function CartCard({
+  cartData,
+  totalPrice,
+  setTotalPrice,
+  index,
+  handleRemove,
+}) {
   return (
     <div className="flex items-center justify-between p-5 bg-[#F9FAFC] rounded-2xl mb-4">
       <div className="flex items-center gap-4">
@@ -19,7 +21,12 @@ function CartCard({ cartData, totalPrice, setTotalPrice }) {
           </p>
         </div>
       </div>
-      <button className="text-[#FF3980]">Remove</button>
+      <button
+        onClick={() => handleRemove(cartData, index)}
+        className="text-[#FF3980]"
+      >
+        Remove
+      </button>
     </div>
   );
 }
