@@ -19,6 +19,7 @@ function Tools({ tools, selected, setSelected }) {
 
   const navCount = () => {
     toast.success("Your Cart has been proceeded successfully !");
+    setTotalPrice(0);
     setSelected([]);
   };
 
