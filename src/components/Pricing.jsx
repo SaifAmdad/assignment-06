@@ -2,7 +2,6 @@ import React from "react";
 import PricingCard from "./sub/PricingCard";
 
 function Pricing({ pricing }) {
-  console.log(pricing);
   return (
     <div className="bg-[#f6f6f8] py-32">
       <div className="w-[90%] md:80% 2xl:w-[76%] mx-auto   ">

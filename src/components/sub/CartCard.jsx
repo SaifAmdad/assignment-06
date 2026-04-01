@@ -1,17 +1,11 @@
 import React from "react";
 
-function CartCard({
-  cartData,
-  totalPrice,
-  setTotalPrice,
-  index,
-  handleRemove,
-}) {
+function CartCard({ cartData, index, handleRemove }) {
   return (
     <div className="flex items-center justify-between p-5 bg-[#f1f1f1] rounded-2xl mb-4">
       <div className="flex items-center gap-4">
         <div className="bg-white flex items-center justify-center border-2 border-gray-200 p-2 rounded-4xl">
-          <img src={cartData.img} alt="" srcset="" />
+          <img src={cartData.img} alt="" srcSet="" />
         </div>
 
         <div>

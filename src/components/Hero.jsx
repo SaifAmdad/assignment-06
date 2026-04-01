@@ -34,7 +34,7 @@ function Hero() {
               <img
                 src="https://namprokash.github.io/assingment-06-photos/Play.png"
                 alt=""
-                srcset=""
+                srcSet=""
               />{" "}
               Watch Demo
             </button>
@@ -44,7 +44,7 @@ function Hero() {
           <img
             src="https://namprokash.github.io/assingment-06-photos/banner.png"
             alt=""
-            srcset=""
+            srcSet=""
           />
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from "react";
 import shoppingCart from "../assets/products/shopping-cart.png";
 
-function Navbar() {
+function Navbar({ selected }) {
   return (
     <>
       <div className="shadow-sm py-3">
@@ -31,7 +31,15 @@ function Navbar() {
             </ul>
           </div>
           <div className="navbar-end gap-2 md:gap-4">
-            <img src={shoppingCart} alt="Shopping Cart" srcset="" />
+            <div className="relative">
+              {selected.length > 0 && (
+                <p className="bg-linear-to-r from-blue-800 to-blue-600 absolute -top-4 -right-3 p-1 text-[12px] h-5 w-5 rounded-4xl flex justify-center items-center text-white">
+                  {selected.length}
+                </p>
+              )}
+              <img src={shoppingCart} alt="Shopping Cart" srcSet="" />
+            </div>
+
             <a href="#">Login</a>
             <button className="bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-2 md:py-3 px-3 md:px-5 rounded-4xl text-white font-bold">
               Get Started

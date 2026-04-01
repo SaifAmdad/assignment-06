@@ -7,7 +7,7 @@ function StepCard({ item }) {
         {item.id}
       </p>
       <div className="flex items-center justify-center h-24 w-24 mx-auto bg-purple-200 rounded-[50%]">
-        <img src={item.img} alt="" srcset="" className="h-12 w-12" />
+        <img src={item.img} alt="" srcSet="" className="h-12 w-12" />
       </div>
       <h1 className="text-center text-2xl font-bold text-[#101727] my-4">
         {item.title}

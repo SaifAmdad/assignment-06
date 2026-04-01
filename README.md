@@ -1,12 +1,20 @@
-# React + Vite
+# DisiTools Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a platform where users can get digital services from.
 
-Currently, two official plugins are available:
+###### This tamplate has been used :
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. React (vite)
+   React-icon, React-Toastify
+2. DaisyUI (Taildwind)
 
-## Expanding the ESLint configuration
+###### Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Rendered products from json using fecth + useEffect
+2. Count of products what are added in cart and it changes dynamicaly in realtime.
+3. Products can be added and removed from the cart and it shows toast while changing.
+
+###### links
+
+1. live link : https://saifamdad-assignment-06.netlify.app/
+2. Repo link : https://github.com/SaifAmdad/assignment-06

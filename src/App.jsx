@@ -10,7 +10,7 @@ import Workflow from "./components/Workflow";
 import Footer from "./components/Footer";
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [selected, setSelected] = useState([]);
   const [tools, setTools] = useState([]);
   const [steps, setSteps] = useState([]);
   const [pricing, setPricing] = useState([]);
@@ -27,10 +27,10 @@ function App() {
 
   return (
     <>
-      <Navbar />
+      <Navbar selected={selected} />
       <Hero />
       <Rating />
-      <Tools tools={tools} />
+      <Tools tools={tools} selected={selected} setSelected={setSelected} />
       <Steps steps={steps} />
       <Pricing pricing={pricing} />
       <Workflow />

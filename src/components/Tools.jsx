@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ProductCard from "./sub/ProductCard";
 import CartCard from "./sub/CartCard";
+import { toast, ToastContainer } from "react-toastify";
 
-function Tools({ tools }) {
-  const [selected, setSelected] = useState([]);
+function Tools({ tools, selected, setSelected }) {
   const [renderComponent, setRenderComponent] = useState("products");
   const [totalPrice, setTotalPrice] = useState(0);
   const handleRemove = (cartData, i) => {
@@ -12,9 +12,16 @@ function Tools({ tools }) {
       const updatedSelected = selected.filter((Saif, index) => index !== i);
       setSelected(updatedSelected);
       setTotalPrice(totalPrice - cartData.price);
+      toast.warn(cartData.name + " : has been removed!");
     }
     return;
   };
+
+  const navCount = () => {
+    toast.success("Your Cart has been proceeded successfully !");
+    setSelected([]);
+  };
+
   return (
     <>
       <div className="w-[76%] mx-auto pt-32 pb-10">
@@ -90,7 +97,10 @@ function Tools({ tools }) {
                   <p className="text-[#627382]">Total</p>
                   <p className="text-black text-2xl font-bold">${totalPrice}</p>
                 </div>
-                <button className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 text-white w-full rounded-4xl ">
+                <button
+                  onClick={navCount}
+                  className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 text-white w-full rounded-4xl "
+                >
                   Proceed To Checkout
                 </button>
               </div>
@@ -104,6 +114,7 @@ function Tools({ tools }) {
         </div>
       )}
       <div className="mb-32"></div>
+      <ToastContainer />
     </>
   );
 }

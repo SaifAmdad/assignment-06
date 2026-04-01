@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import { IoCheckmarkSharp } from "react-icons/io5";
+import { toast } from "react-toastify";
 
 function ProductCard({
   data,
@@ -9,9 +10,12 @@ function ProductCard({
   totalPrice,
   setTotalPrice,
 }) {
+  const [productAdded, setProductAdded] = useState("no");
   const handleSelect = (data, index) => {
     setSelected([...selected, data]);
     setTotalPrice(totalPrice + data.price);
+    setProductAdded("yes");
+    toast.success(data.name + " : has been added successfully!");
   };
 
   return (
@@ -22,7 +26,7 @@ function ProductCard({
         {data.badge}
       </p>
       <div className="h-14 w-14 bg-white rounded-4xl flex justify-center items-center border-gray-200 border">
-        <img src={data.img} alt="" srcset="" />
+        <img src={data.img} alt="" srcSet="" />
       </div>
       <h1 className="text-2xl font-bold my-4">{data.name}</h1>
       <p className="text-[16px] font-normal text-[#627382] leading-5">
@@ -42,7 +46,7 @@ function ProductCard({
         onClick={() => handleSelect(data, index)}
         className="btn bg-linear-to-r from-[#4F39F6] to-[#9514FA] py-4 rounded-4xl text-white w-full mt-4"
       >
-        Buy Now
+        {productAdded === "no" ? "Buy Now" : "Added to Cart"}
       </button>
     </div>
   );
