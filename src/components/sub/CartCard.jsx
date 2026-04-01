@@ -17,7 +17,7 @@ function CartCard({ cartData, index, handleRemove }) {
       </div>
       <button
         onClick={() => handleRemove(cartData, index)}
-        className="text-[#FF3980]"
+        className="text-[#FF3980] btn bg-transparent border-none"
       >
         Remove
       </button>
